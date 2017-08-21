@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0DD841971F4B2EB600305C9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD841961F4B2EB600305C9B /* AppDelegate.swift */; };
 		0DD841991F4B2EB600305C9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD841981F4B2EB600305C9B /* ViewController.swift */; };
-		0DD8419C1F4B2EB600305C9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DD8419A1F4B2EB600305C9B /* Main.storyboard */; };
 		0DD8419E1F4B2EB600305C9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DD8419D1F4B2EB600305C9B /* Assets.xcassets */; };
 		0DD841A11F4B2EB600305C9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DD8419F1F4B2EB600305C9B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,10 +17,10 @@
 		0DD841931F4B2EB600305C9B /* RealmServerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmServerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DD841961F4B2EB600305C9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DD841981F4B2EB600305C9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0DD8419B1F4B2EB600305C9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0DD8419D1F4B2EB600305C9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DD841A01F4B2EB600305C9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DD841A21F4B2EB600305C9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DD841A81F4B2F5C00305C9B /* RealmServerDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RealmServerDemo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +53,9 @@
 		0DD841951F4B2EB600305C9B /* RealmServerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0DD841A81F4B2F5C00305C9B /* RealmServerDemo.entitlements */,
 				0DD841961F4B2EB600305C9B /* AppDelegate.swift */,
 				0DD841981F4B2EB600305C9B /* ViewController.swift */,
-				0DD8419A1F4B2EB600305C9B /* Main.storyboard */,
 				0DD8419D1F4B2EB600305C9B /* Assets.xcassets */,
 				0DD8419F1F4B2EB600305C9B /* LaunchScreen.storyboard */,
 				0DD841A21F4B2EB600305C9B /* Info.plist */,
@@ -98,6 +97,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 22U4CL887R;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -126,7 +130,6 @@
 			files = (
 				0DD841A11F4B2EB600305C9B /* LaunchScreen.storyboard in Resources */,
 				0DD8419E1F4B2EB600305C9B /* Assets.xcassets in Resources */,
-				0DD8419C1F4B2EB600305C9B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,14 +148,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0DD8419A1F4B2EB600305C9B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0DD8419B1F4B2EB600305C9B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0DD8419F1F4B2EB600305C9B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -261,6 +256,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RealmServerDemo/RealmServerDemo.entitlements;
 				DEVELOPMENT_TEAM = 22U4CL887R;
 				INFOPLIST_FILE = RealmServerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -274,6 +270,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RealmServerDemo/RealmServerDemo.entitlements;
 				DEVELOPMENT_TEAM = 22U4CL887R;
 				INFOPLIST_FILE = RealmServerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
